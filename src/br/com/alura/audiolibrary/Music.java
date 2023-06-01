@@ -28,4 +28,13 @@ public class Music extends Audio {
     public void setAlbum(String album) {
         this.album = album;
     }
+
+    @Override
+    public void displayTechnicalSheet() {
+        System.out.println("O nome da música é: " + title);
+        System.out.println("O(a) cantor(a) da música é: " + artist);
+        System.out.println("O gênero da música é: " + genre);
+        System.out.println("A música pertence ao álbum: " + album);
+        super.displayTechnicalSheet();
+    }
 }

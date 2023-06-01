@@ -1,25 +1,25 @@
 package br.com.alura.audiolibrary;
 
 public class Audio {
-    private String Title;
-    private int durationInMinutes;
+    protected String title;
+    private double durationInMinutes;
     private int playCount;
     private int likeCount;
     private int rating;
 
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
 
-    public int getDurationInMinutes() {
+    public double getDurationInMinutes() {
         return durationInMinutes;
     }
 
-    public void setDurationInMinutes(int durationInMinutes) {
+    public void setDurationInMinutes(double durationInMinutes) {
         this.durationInMinutes = durationInMinutes;
     }
 
@@ -46,4 +46,12 @@ public class Audio {
     public void setRating(int rating) {
         this.rating = rating;
     }
+
+    public void displayTechnicalSheet(){
+        System.out.println("Duração em minutos: " + durationInMinutes);
+        System.out.println("Quantidade de curtidas: " + likeCount);
+        System.out.println("Número de reproduções: " + playCount);
+        System.out.println("Classificação de 0 a 5: " + rating);
+    }
+
 }

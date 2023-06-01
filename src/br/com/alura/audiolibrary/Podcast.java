@@ -19,4 +19,12 @@ public class Podcast extends Audio {
     public void setTheme(String theme) {
         this.theme = theme;
     }
+
+    @Override
+    public void displayTechnicalSheet() {
+        System.out.println("O título do podcast é: " + title);
+        System.out.println("O(a) apresentador(a) do podcast é: " + host);
+        System.out.println("O tema do podcast é: " + theme);
+        super.displayTechnicalSheet();
+    }
 }
