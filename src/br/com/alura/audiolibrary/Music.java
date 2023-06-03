@@ -37,4 +37,13 @@ public class Music extends Audio {
         System.out.println("A música pertence ao álbum: " + album);
         super.displayTechnicalSheet();
     }
+
+    @Override
+    public int getRating() {
+        if (this.getPlayCount() > 2000) {
+            return 10;
+        } else {
+            return 8;
+        }
+    }
 }

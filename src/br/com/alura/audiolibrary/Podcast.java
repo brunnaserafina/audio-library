@@ -27,4 +27,13 @@ public class Podcast extends Audio {
         System.out.println("O tema do podcast é: " + theme);
         super.displayTechnicalSheet();
     }
+
+    @Override
+    public int getRating() {
+        if (this.getLikeCount() > 500) {
+            return 10;
+        } else {
+            return 8;
+        }
+    }
 }

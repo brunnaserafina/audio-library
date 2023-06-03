@@ -1,3 +1,4 @@
+import br.com.alura.audiolibrary.Favorites;
 import br.com.alura.audiolibrary.Music;
 import br.com.alura.audiolibrary.Podcast;
 
@@ -13,6 +14,13 @@ public class Main {
         rehab.setDurationInMinutes(3.33);
         rehab.displayTechnicalSheet();
 
+        for (int i = 0; i < 1000; i++) {
+            rehab.play();
+        }
+
+        for (int i = 0; i < 50; i++) {
+            rehab.like();
+        }
 
         Podcast pressentimento = new Podcast();
         pressentimento.setTitle("Pressentimento");
@@ -20,5 +28,19 @@ public class Main {
         pressentimento.setTheme("Histórias do cotidiano");
         pressentimento.setDurationInMinutes(11.57);
         pressentimento.displayTechnicalSheet();
+
+        for (int i = 0; i < 5000; i++) {
+            pressentimento.play();
+        }
+
+        for (int i = 0; i < 1000; i++) {
+            pressentimento.like();
+        }
+
+
+        Favorites favorites = new Favorites();
+        favorites.include(pressentimento);
+        favorites.include(rehab);
+
     }
 }

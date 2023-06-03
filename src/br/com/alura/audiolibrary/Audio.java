@@ -27,27 +27,23 @@ public class Audio {
         return playCount;
     }
 
-    public void setPlayCount(int playCount) {
-        this.playCount = playCount;
-    }
-
     public int getLikeCount() {
         return likeCount;
-    }
-
-    public void setLikeCount(int likeCount) {
-        this.likeCount = likeCount;
     }
 
     public int getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
-        this.rating = rating;
+    public void like() {
+        likeCount++;
     }
 
-    public void displayTechnicalSheet(){
+    public void play() {
+        playCount++;
+    }
+
+    public void displayTechnicalSheet() {
         System.out.println("Duração em minutos: " + durationInMinutes);
         System.out.println("Quantidade de curtidas: " + likeCount);
         System.out.println("Número de reproduções: " + playCount);
